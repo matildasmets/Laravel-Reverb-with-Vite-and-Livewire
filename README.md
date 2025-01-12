@@ -1,39 +1,48 @@
-# Laravel Reverb with Vite and Livewire.
 
-This is a basic example application of Laravel Reverb with Vite and Livewire.
+# Laravel Reverb with Vite and Livewire
+
+This is a basic example application demonstrating the use of Laravel Reverb with Vite and Livewire.
 
 ## Installation
 
-Use the following commands:
+Follow these steps to set up the application:
 
-```apache
-composer install
-npm install
-```
+1. Install PHP and Node.js dependencies:
+   ```bash
+   composer install
+   npm install
+   ```
+2. Set up your `.env` file with the following Reverb-related variables:
+   ```dotenv
+   REVERB_APP_ID=XXX
+   REVERB_APP_KEY=XXX
+   REVERB_APP_SECRET=XXX
+   REVERB_HOST="localhost"
+   REVERB_PORT=8080
+   REVERB_SCHEME=http
+   ```
+3. Install Reverb if it isn't already set up:
+   ```bash
+   php artisan install:broadcasting
+   ```
+4. Run the database migrations:
+   ```bash
+   php artisan migrate
+   ```
 
-Setup your .env variables:
+## Running the Application
 
-```apache
-REVERB_APP_ID=XXX
-REVERB_APP_KEY=XXX
-REVERB_APP_SECRET=XXX
-REVERB_HOST="localhost"
-REVERB_PORT=8080
-REVERB_SCHEME=http
-```
+Start the application using the following commands:
 
-If Reverb isn't installed yet, try
-
-```apache
-php artisan install:broadcasting
-```
-
-## Run
-
-Run the application:
-
-```apache
-php artisan serve
-npm run dev
-php artisan reverb:start
-```
+1. Serve the Laravel application:
+   ```bash
+   php artisan serve
+   ```
+2. Build and watch your frontend assets with Vite:
+   ```bash
+   npm run dev
+   ```
+3. Start the Reverb server:
+   ```bash
+   php artisan reverb:start
+   ```
