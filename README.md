@@ -12,7 +12,11 @@ Follow these steps to set up the application:
    composer install
    npm install
    ```
-2. Set up your `.env` file with the following Reverb-related variables:
+2. Install Reverb if it isn't already set up:
+   ```bash
+   php artisan install:broadcasting
+   ```
+3. Set up your `.env` file with the following Reverb-related variables:
    ```dotenv
    REVERB_APP_ID=XXX
    REVERB_APP_KEY=XXX
@@ -20,10 +24,6 @@ Follow these steps to set up the application:
    REVERB_HOST="localhost"
    REVERB_PORT=8080
    REVERB_SCHEME=http
-   ```
-3. Install Reverb if it isn't already set up:
-   ```bash
-   php artisan install:broadcasting
    ```
 4. Run the database migrations:
    ```bash
